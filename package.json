@@ -4,10 +4,14 @@
   "main": "index.js",
   "scripts": {
     "debug": "node --inspect-brk -r ts-node/register src/index.ts",
-    "dev": "ts-node src/index.ts",
-    "uat": "NODE_ENV=uat ts-node src/index.ts",
-    "prod": "NODE_ENV=prod ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts",
+    "start:uat": "NODE_ENV=uat ts-node src/index.ts",
+    "start:prod": "NODE_ENV=prod ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:dev": "NODE_ENV=development npm run build",
+    "build:uat": "NODE_ENV=uat npm run build",
+    "build:prod": "NODE_ENV=production npm run build"
   },
   "keywords": [],
   "author": "",
