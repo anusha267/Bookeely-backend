@@ -1,0 +1,44 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# TypeScript
+*.tsbuildinfo
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Coverage
+coverage/
+*.lcov
+
+# Other files
+*.tgz
+*.zip
+
+# npm package-lock
+package-lock.json
+
+# Jest
+jest-test-results.json
+jest-junit.xml
