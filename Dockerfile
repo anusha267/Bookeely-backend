@@ -22,7 +22,7 @@ RUN npm install
 COPY . .
 
 # Build the application (if necessary).
-RUN npm run start:prod
+RUN npm run build:prod
 
 # Expose the port that your app runs on.
 EXPOSE 8080

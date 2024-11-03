@@ -1,5 +1,5 @@
 {
-  "name": "bookeely",
+  "name": "bookenzy",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,11 +11,11 @@
     "build": "tsc",
     "build:dev": "NODE_ENV=development npm run build",
     "build:uat": "NODE_ENV=uat npm run build",
-    "build:prod": "NODE_ENV=production npm run build"
+    "build:prod": "NODE_ENV=prod npm run build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "@neondatabase/serverless": "^0.10.1",
