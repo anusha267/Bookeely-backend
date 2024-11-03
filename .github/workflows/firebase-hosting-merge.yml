@@ -44,7 +44,7 @@ jobs:
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@v0
         with:
-          image: your-project-name/bookenzy-backend:latest
+          image: ${{ secrets.GCP_PROJECT_ID }}/bookenzy-backend:latest
           service: bookenzy-backend
           project: ${{ secrets.GCP_PROJECT_ID }}
           credentials: ${{ secrets.GCP_SA_KEY }}
