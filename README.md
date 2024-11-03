@@ -1,6 +1,6 @@
-# Bookeely
+# bookenzy
 
-Bookeely is a Node.js application for user authentication and management using JWT (JSON Web Tokens). Built with TypeScript and Express, it allows users to securely register and log in.
+bookenzy is a Node.js application for user authentication and management using JWT (JSON Web Tokens). Built with TypeScript and Express, it allows users to securely register and log in.
 
 ## Features
 
@@ -29,8 +29,8 @@ Bookeely is a Node.js application for user authentication and management using J
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/bookeely.git
-   cd bookeely
+   git clone https://github.com/yourusername/bookenzy.git
+   cd bookenzy
    ```
 2. Install dependencies:
 
