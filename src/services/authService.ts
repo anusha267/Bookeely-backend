@@ -4,7 +4,8 @@ import { getUserByUsernameOrEmail } from "../models/userModel"; // Import a func
 import jwt from "jsonwebtoken";
 import { User } from "../models/userModel"; // Ensure you have the User interface imported
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_default_jwt_secret"; // Use a strong secret key
+const BOOKENZY_JWT_SECRET =
+  process.env.BOOKENZY_JWT_SECRET || "your_default_jwt_secret"; // Use a strong secret key
 
 export const registerUser = async (
   email: string,
@@ -43,7 +44,7 @@ export const loginUser = async (usernameOrEmail: string, password: string) => {
         ...user,
       },
     },
-    JWT_SECRET,
+    BOOKENZY_JWT_SECRET,
     {
       expiresIn: "1h",
       algorithm: "HS256",

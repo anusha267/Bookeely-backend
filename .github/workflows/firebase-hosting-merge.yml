@@ -39,7 +39,7 @@ jobs:
         run: |
           gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/bookenzy-backend:latest \
           --build-arg DATABASE_URL=${{ secrets.DATABASE_URL_PROD }} \
-          --build-arg JWT_SECRET=${{ secrets.JWT_SECRET_PROD }} .
+          --build-arg BOOKENZY_JWT_SECRET=${{ secrets.JWT_SECRET_PROD }} .
 
       - name: Deploy to Cloud Run
         uses: google-github-actions/deploy-cloudrun@v2
@@ -50,4 +50,4 @@ jobs:
           region: asia-south2
           allow_unauthenticated: true
           credentials_json: ${{ secrets.GCP_SA_KEY }}
-          set-env-vars: DATABASE_URL=${{ secrets.DATABASE_URL_PROD }},JWT_SECRET=${{ secrets.JWT_SECRET_PROD }} # Add your environment variables here
+          set-env-vars: DATABASE_URL=${{ secrets.DATABASE_URL_PROD }},BOOKENZY_JWT_SECRET=${{ secrets.JWT_SECRET_PROD }} # Add your environment variables here

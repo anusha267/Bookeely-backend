@@ -42,7 +42,7 @@ npm install
 3. Set up a .env file:
 
 ```bash
-JWT_SECRET=your_secret_key
+BOOKENZY_JWT_SECRET=your_secret_key
 DATABASE_URL=your_database_connection_string
 ```
 
