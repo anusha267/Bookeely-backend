@@ -4,6 +4,14 @@ FROM node:23
 # Set the working directory inside the container.
 WORKDIR /usr/src/app
 
+# Define build arguments.
+ARG DATABASE_URL
+ARG BOOKENZY_JWT_SECRET
+
+# Make these available as environment variables within the container.
+ENV DATABASE_URL=$DATABASE_URL
+ENV BOOKENZY_JWT_SECRET=$BOOKENZY_JWT_SECRET
+
 # Copy package.json and package-lock.json (if available).
 COPY package*.json ./
 
