@@ -48,3 +48,4 @@ jobs:
           region: asia-south2
           allow_unauthenticated: true
           credentials_json: ${{ secrets.GCP_SA_KEY }}
+          set-env-vars: DATABASE_URL=${{ secrets.DATABASE_URL_PROD }},JWT_SECRET=${{ secrets.JWT_SECRET_PROD }} # Add your environment variables here
