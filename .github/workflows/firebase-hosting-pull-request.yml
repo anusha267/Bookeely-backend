@@ -23,11 +23,7 @@ jobs:
         run: npm install
 
       - name: Run build
-        run: npm run build:prod
+        run: npm run build:uat
 
-      # - name: Firebase Deploy
-      #   uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: ${{ secrets.GITHUB_TOKEN }}
-      #     firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BOOKENZY_F32CD }}
-      #     projectId: bookenzy-f32cd
+      - name: Run build
+        run: npm run build:prod

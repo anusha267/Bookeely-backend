@@ -22,18 +22,18 @@ jobs:
       - name: Run build
         run: npm run build:prod
 
-      # - name: Setup Google Cloud SDK
-      #   uses: google-github-actions/setup-gcloud@v4
-      #   with:
-      #     service_account_key: ${{ secrets.GCP_SA_KEY }}
-      #     project_id: ${{ secrets.GCP_PROJECT_ID }}
-      #     export_default_credentials: true
+      - name: Setup Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v4
+        with:
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          export_default_credentials: true
 
-      # - name: Build and Deploy to Cloud Run
-      #   run: |
-      #     gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/your-image-name
-      #     gcloud run deploy your-service-name \
-      #       --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/your-image-name \
-      #       --platform managed \
-      #       --region your-region \
-      #       --allow-unauthenticated
+      - name: Build and Deploy to Cloud Run
+        run: |
+          gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT_ID }}/bookenzy
+          gcloud run deploy your-service-name \
+            --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/bookenzy \
+            --platform managed \
+            --region asia-south2 \
+            --allow-unauthenticated
